@@ -119,3 +119,95 @@ p.velkomstTxt {
     margin-top: 1vw;
     margin-bottom: 4vw;
 }
+
+/* RECIPE */
+.grid-container-recipe {
+    display: grid; 
+    grid-template-areas: 
+        'recipe-title recipe-title'
+        'recipe-image recipe-image'
+        'icons icons'
+        'recipe-ingredients recipe-description'; 
+}
+
+.recipe-title {
+    grid-area: recipe-title;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.recipe-image {
+    grid-area: recipe-image;
+    background-image: url("assets/pestosnurre.jpg");
+    background-size: cover;
+	background-position: center, center;
+	background-repeat: no-repeat;
+    width: 100vw;
+    height: 30vw;
+}
+
+.icons {
+    grid-area: icons;
+    display: grid;
+    grid-template-areas:
+        'preptime cooktime'; 
+}
+
+.preptime {
+    grid-area: preptime;
+    margin: 6vh 0 0 0;
+}
+
+.cooktime {
+    grid-area: cooktime;
+    margin: 6vh 0 0 0;
+}
+
+.preptime i, .cooktime i {
+    font-size: 40px;
+}
+
+.recipe-ingredients {
+    grid-area: recipe-ingredients;
+    width: 35vw;
+    height: auto;
+    margin: 4vh 2vw;
+}
+
+.recipe-description {
+    grid-area: recipe-description;
+    width: 55vw;
+    height: auto;
+    margin: 4vh 2vw;
+}
+
+.recipe-description h1, .recipe-ingredients h1 {
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.description {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.5em;
+    margin: 6vh 0 0 6vw;
+}
+
+.td1 {
+    padding: 2vh 0vw;
+}
+
+.th1 {
+    padding: 2vh 2vw;
+    color: green;
+}
+
+.ingredients-list {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.5em;
+    margin: 6vh 0 0 6vw;
+}
+
+.th {
+    padding: 1vh 1.5vw;
+    color: green;
+}
