@@ -299,16 +299,16 @@ h3 {
 
 .preptime {
     grid-area: preptime;
-    margin: 6vh 0 0 0;
+    margin: 10vh 2vw 0 auto;
 }
 
 .cooktime {
     grid-area: cooktime;
-    margin: 6vh 0 0 0;
+    margin: 10vh auto 0 2vw;
 }
 
 .preptime i, .cooktime i {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .recipe-ingredients {
