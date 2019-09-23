@@ -160,19 +160,19 @@ p.velkomstTxt {
     margin-bottom: 4vw;
 }
 
-#forsideDiv1 {
+#koldskålDiv {
     background-image: url(https://miasommer.files.wordpress.com/2017/05/img_2768.jpg?w=768);
     background-position: center;
 }
 
-#forsideDiv2 {
+#hummusDiv {
     background-image: url(https://miasommer.files.wordpress.com/2011/08/img_8857-crop.jpg?w=768);
     background-position: center;
 }
 
-#forsideDiv3 {
+#kyllingDiv {
     background-image: url(https://miasommer.files.wordpress.com/2019/01/img_2075.jpg?w=768);
-    background-position: center;
+    background-position: top;
 }
 
 h3 {
@@ -216,4 +216,50 @@ h3.logInH3 {
     margin-right: 6vw;
     width: 10vw;
     height: 3vw;
+}
+
+
+/* MORGENMAD: */
+
+.categoryImgBox {
+    float: left;
+    width: 27vw;
+    height: 24vw;
+    margin-left: 4.6vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+}
+
+#smoothieDiv {
+    background-image: url(https://images.unsplash.com/photo-1546549095-5d8bc3c37ffa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+    background-position: center;
+}
+
+#pandekagerDiv {
+    background-image: url(https://images.unsplash.com/photo-1506084868230-bb9d95c24759?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+    background-position: center;
+}
+
+#suppeDiv {
+    background-image: url(https://miasommer.files.wordpress.com/2014/10/img_5465.jpg?w=768);
+    background-position: bottom;
+}
+
+#dahlDiv {
+    background-image: url(https://miasommer.files.wordpress.com/2011/09/img_4721-resized.jpg?w=768&h=512);
+    background-position: top;
+}
+
+#müsliDiv {
+    background-image: url(https://marialottes.dk/wp-content/uploads/2017/05/m%C3%BCslibar-opskrift.jpg);
+    background-position: center;
+}
+
+#dadelDiv {
+    background-image: url(https://www.valdemarsro.dk/wp-content/2008/03/dadelkugler-opskrift.jpg);
+    background-position: left;
+}
+
+.h3 {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.71);
 }
