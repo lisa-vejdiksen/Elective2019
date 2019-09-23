@@ -137,7 +137,7 @@ div.velkomstBox {
     height: 15vw;
 }
 
-h2.velkomstH2 {
+h2 {
     font-family: 'Playfair Display', serif;
     text-align: center;
     margin: auto;
@@ -182,4 +182,38 @@ h3 {
     margin-top: 2vw;
     color: white;
     font-size: 1.3em;
+}
+
+
+/* LOG IND: */
+
+h3.logInH3 {
+    font-size: 1.2em;
+    color: black;
+    text-align: left;
+    margin-left: 4vw;
+    margin-top: 3vw;
+}
+
+.logInSection {
+    width: 44vw;
+    margin: auto;
+    margin-top: 4vw;
+    height: 30vw;
+    padding-top: 1vw;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.logInInput {
+    margin-left: 4vw;
+    margin-top: 2vw;
+    width: 32vw;
+}
+
+.logInBtn {
+    float: right;
+    margin-top: 4vw;
+    margin-right: 6vw;
+    width: 10vw;
+    height: 3vw;
 }
