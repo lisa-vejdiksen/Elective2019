@@ -50,7 +50,6 @@ img.bannerImg {
 /*Navigation:*/
 
 nav {
-    border-bottom: 1px solid green;
     height: 4vw;
     width: 100vw;
 }
@@ -68,6 +67,14 @@ nav {
     margin-left: 4vw;
 }
 
+p.navLi {
+    float: left;
+    list-style: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-left: 1vw;
+    margin-top: 0vw;
+}
+
 .navLiLogIn {
     float: right;
     margin-left: 4vw;
@@ -78,14 +85,50 @@ nav {
     margin-left: 29vw;
 }
 
+.dropdown:hover .dropdownDiv {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    text-align: left;
+    display: inline-block;
+    margin-left: 0vw;
+    color: black;
+}
+
+.dropdownDiv {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdownDiv a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
 
 /*FOOTER:*/
 
 footer {
     width: 100vw;
     height: 5vw;
-    border: 1px solid black;
+    border-top: 1px solid green;
     clear: both;
+}
+
+.pFooter {
+    float: left;
+    margin-top: 2vw;
+    margin-left: 3vw;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 
@@ -93,7 +136,7 @@ footer {
 
 div.velkomstBox {
     width: 100vw;
-    height: 16vw;
+    height: 15vw;
 }
 
 h2.velkomstH2 {
@@ -111,11 +154,34 @@ p.velkomstTxt {
 }
 
 .forsideImgBox {
-    border: 1px solid black;
     float: left;
     width: 27vw;
-    height: 38vw;
+    height: 40vw;
     margin-left: 5vw;
     margin-top: 1vw;
     margin-bottom: 4vw;
+}
+
+#forsideDiv1 {
+    background-image: url(https://miasommer.files.wordpress.com/2017/05/img_2768.jpg?w=768);
+    background-position: center;
+}
+
+#forsideDiv2 {
+    background-image: url(https://miasommer.files.wordpress.com/2011/08/img_8857-crop.jpg?w=768);
+    background-position: center;
+}
+
+#forsideDiv3 {
+    background-image: url(https://miasommer.files.wordpress.com/2019/01/img_2075.jpg?w=768);
+    background-position: center;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin: auto;
+    margin-top: 2vw;
+    color: white;
+    font-size: 1.3em;
 }
