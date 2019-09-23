@@ -363,13 +363,15 @@ h3 {
     text-align: center;
 }
 
-.minutes {
+.ar-text.minutes {
     display: inline-block;
     margin: 0;
 }
 
 .ar-text {
     font-family: 'Open Sans Condensed', sans-serif;
+    text-align: left;
+    margin: 0.8em 0;
 }
 
 .ar-grid-container {
@@ -472,10 +474,12 @@ h3 {
 #step5 {grid-area: s5;}
 #text-step5 {grid-area: t5;}
 
-.step-text {
+h3.step-text {
     display: inline-block;
     margin: 0;
     vertical-align: top;
+    color: black;
+    text-shadow: none;
 }
 
 .step-area {
@@ -489,6 +493,7 @@ h3 {
 }
 
 .category-container {
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 18px;
     display: inline-block;
     position: relative;
