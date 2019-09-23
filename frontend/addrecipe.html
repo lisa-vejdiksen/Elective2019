@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display&display=swap');
+    </style>
+    <title>Veganer Universet</title>
+</head>
+
+<body>
+    <header>
+        <div class="bannerBox">
+            <img class="bannerImg" src="assets/salad-264826_1920.jpg" alt="salad Banner">
+            <h1 class="bannerH1">Veganer Universet</h1>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="ar-head">Opret ny opskrift</h1>
+        <div class="ar-grid-container">
+            <div class="ar-add-title">
+                <h2 class="ar-text">Tilføj titel</h2>
+                <input type="text" name="titel" id="ar-title">
+            </div>
+
+            <div class="ar-add-preptime">
+                <h2 class="ar-text">Forberedningstid</h2>
+                <input type="number" name="preptime" id="ar-preptime">
+                <p class="minutes ar-text">minutter</p>
+            </div>
+
+            <div class="ar-add-cooktime">
+                <h2 class="ar-text">Tilberedningstid</h2>
+                <input type="number" name="cooktime" id="ar-cooktime">
+                <p class="minutes ar-text">minutter</p>
+            </div>
+
+            <div class="ar-add-image">
+                <h2 class="ar-text">Tilføj billede</h2>
+                <input type="url" name="image" id="ar-image" placeholder="billede url">
+            </div>
+
+            <div class="ar-ingredient-container">
+                <h2 class="ar-text">Tilføj ingredienser</h2>
+                <div class="ar-ingredient-row">
+                    <input type="number" name="amount" class="amount" id="ar-amount1" placeholder="1">
+                    <select name="measurement" id="measurement1" class="measure">
+                        <option value="gram">gram</option>
+                        <option value="kg">kg</option>
+                        <option value="ml">ml</option>
+                        <option value="dl">dl</option>
+                        <option value="cl">cl</option>
+                        <option value="liter">liter</option>
+                        <option value="tsk">tsk</option>
+                        <option value="spsk">spsk</option>
+                        <option value="håndfuld">håndfuld</option>
+                        <option value="bundt">bundt</option>
+                        <option value="stk">stk</option>
+                        <option value="knivspids">knivspids</option>
+                        <option value="fed">fed</option>
+                    </select>
+                    <input type="text" name="ingredient" class="ingredient" id="ar-ingredient1"
+                        placeholder="ingrediens">
+                </div>
+
+                <div class="ar-ingredient-row">
+                    <input type="number" name="amount" class="amount" id="ar-amount2" placeholder="1">
+                    <select name="measurement" class="measure" id="measurement2">
+                        <option value="gram">gram</option>
+                        <option value="kg">kg</option>
+                        <option value="ml">ml</option>
+                        <option value="dl">dl</option>
+                        <option value="cl">cl</option>
+                        <option value="liter">liter</option>
+                        <option value="tsk">tsk</option>
+                        <option value="spsk">spsk</option>
+                        <option value="håndfuld">håndfuld</option>
+                        <option value="bundt">bundt</option>
+                        <option value="stk">stk</option>
+                        <option value="knivspids">knivspids</option>
+                        <option value="fed">fed</option>
+                    </select>
+                    <input type="text" name="ingredient" class="ingredient" id="ar-ingredient2"
+                        placeholder="ingrediens">
+                </div>
+
+                <div class="ar-ingredient-row">
+                    <input type="number" name="amount" class="amount" id="ar-amount3" placeholder="1">
+                    <select name="measurement" class="measure" id="measurement3">
+                        <option value="gram">gram</option>
+                        <option value="kg">kg</option>
+                        <option value="ml">ml</option>
+                        <option value="dl">dl</option>
+                        <option value="cl">cl</option>
+                        <option value="liter">liter</option>
+                        <option value="tsk">tsk</option>
+                        <option value="spsk">spsk</option>
+                        <option value="håndfuld">håndfuld</option>
+                        <option value="bundt">bundt</option>
+                        <option value="stk">stk</option>
+                        <option value="knivspids">knivspids</option>
+                        <option value="fed">fed</option>
+                    </select>
+                    <input type="text" name="ingredient" class="ingredient" id="ar-ingredient3"
+                        placeholder="ingrediens">
+                </div>
+
+                <div class="ar-ingredient-row">
+                    <input type="number" name="amount" class="amount" id="ar-amount4" placeholder="1">
+                    <select name="measurement" class="measure" id="measurement4">
+                        <option value="gram">gram</option>
+                        <option value="kg">kg</option>
+                        <option value="ml">ml</option>
+                        <option value="dl">dl</option>
+                        <option value="cl">cl</option>
+                        <option value="liter">liter</option>
+                        <option value="tsk">tsk</option>
+                        <option value="spsk">spsk</option>
+                        <option value="håndfuld">håndfuld</option>
+                        <option value="bundt">bundt</option>
+                        <option value="stk">stk</option>
+                        <option value="knivspids">knivspids</option>
+                        <option value="fed">fed</option>
+                    </select>
+                    <input type="text" name="ingredient" class="ingredient" id="ar-ingredient4"
+                        placeholder="ingrediens">
+                </div>
+
+                <div class="ar-ingredient-row">
+                    <input type="number" name="amount" class="amount" id="ar-amount5" placeholder="1">
+                    <select name="measurement" class="measure" id="measurement5">
+                        <option value="gram">gram</option>
+                        <option value="kg">kg</option>
+                        <option value="ml">ml</option>
+                        <option value="dl">dl</option>
+                        <option value="cl">cl</option>
+                        <option value="liter">liter</option>
+                        <option value="tsk">tsk</option>
+                        <option value="spsk">spsk</option>
+                        <option value="håndfuld">håndfuld</option>
+                        <option value="bundt">bundt</option>
+                        <option value="stk">stk</option>
+                        <option value="knivspids">knivspids</option>
+                        <option value="fed">fed</option>
+                    </select>
+                    <input type="text" name="ingredient" class="ingredient" id="ar-ingredient5"
+                        placeholder="ingrediens">
+                </div>
+
+                <div class="ar-ingredient-row">
+                    <input type="number" name="amount" class="amount" id="ar-amount6" placeholder="1">
+                    <select name="measurement" class="measure" id="measurement6">
+                        <option value="gram">gram</option>
+                        <option value="kg">kg</option>
+                        <option value="ml">ml</option>
+                        <option value="dl">dl</option>
+                        <option value="cl">cl</option>
+                        <option value="liter">liter</option>
+                        <option value="tsk">tsk</option>
+                        <option value="spsk">spsk</option>
+                        <option value="håndfuld">håndfuld</option>
+                        <option value="bundt">bundt</option>
+                        <option value="stk">stk</option>
+                        <option value="knivspids">knivspids</option>
+                        <option value="fed">fed</option>
+                    </select>
+                    <input type="text" name="ingredient" class="ingredient" id="ar-ingredient6"
+                        placeholder="ingrediens">
+                </div>
+
+                <div class="ar-ingredient-row">
+                    <input type="number" name="amount" class="amount" id="ar-amount7" placeholder="1">
+                    <select name="measurement" class="measure" id="measurement7">
+                        <option value="gram">gram</option>
+                        <option value="kg">kg</option>
+                        <option value="ml">ml</option>
+                        <option value="dl">dl</option>
+                        <option value="cl">cl</option>
+                        <option value="liter">liter</option>
+                        <option value="tsk">tsk</option>
+                        <option value="spsk">spsk</option>
+                        <option value="håndfuld">håndfuld</option>
+                        <option value="bundt">bundt</option>
+                        <option value="stk">stk</option>
+                        <option value="knivspids">knivspids</option>
+                        <option value="fed">fed</option>
+                    </select>
+                    <input type="text" name="ingredient" class="ingredient" id="ar-ingredient7"
+                        placeholder="ingrediens">
+                </div>
+
+                <div class="ar-ingredient-row">
+                    <input type="number" name="amount" class="amount" id="ar-amount8" placeholder="1">
+                    <select name="measurement" class="measure" id="measurement8">
+                        <option value="gram">gram</option>
+                        <option value="kg">kg</option>
+                        <option value="ml">ml</option>
+                        <option value="dl">dl</option>
+                        <option value="cl">cl</option>
+                        <option value="liter">liter</option>
+                        <option value="tsk">tsk</option>
+                        <option value="spsk">spsk</option>
+                        <option value="håndfuld">håndfuld</option>
+                        <option value="bundt">bundt</option>
+                        <option value="stk">stk</option>
+                        <option value="knivspids">knivspids</option>
+                        <option value="fed">fed</option>
+                    </select>
+                    <input type="text" name="ingredient" class="ingredient" id="ar-ingredient8"
+                        placeholder="ingrediens">
+                </div>
+
+                <div class="ar-ingredient-row">
+                    <input type="number" name="amount" class="amount" id="ar-amount9" placeholder="1">
+                    <select name="measurement" class="measure" id="measurement9">
+                        <option value="gram">gram</option>
+                        <option value="kg">kg</option>
+                        <option value="ml">ml</option>
+                        <option value="dl">dl</option>
+                        <option value="cl">cl</option>
+                        <option value="liter">liter</option>
+                        <option value="tsk">tsk</option>
+                        <option value="spsk">spsk</option>
+                        <option value="håndfuld">håndfuld</option>
+                        <option value="bundt">bundt</option>
+                        <option value="stk">stk</option>
+                        <option value="knivspids">knivspids</option>
+                        <option value="fed">fed</option>
+                    </select>
+                    <input type="text" name="ingredient" class="ingredient" id="ar-ingredient9"
+                        placeholder="ingrediens">
+                </div>
+
+                <div class="ar-ingredient-row">
+                    <input type="number" name="amount" class="amount" id="ar-amount10" placeholder="1">
+                    <select name="measurement" class="measure" id="measurement10">
+                        <option value="gram">gram</option>
+                        <option value="kg">kg</option>
+                        <option value="ml">ml</option>
+                        <option value="dl">dl</option>
+                        <option value="cl">cl</option>
+                        <option value="liter">liter</option>
+                        <option value="tsk">tsk</option>
+                        <option value="spsk">spsk</option>
+                        <option value="håndfuld">håndfuld</option>
+                        <option value="bundt">bundt</option>
+                        <option value="stk">stk</option>
+                        <option value="knivspids">knivspids</option>
+                        <option value="fed">fed</option>
+                    </select>
+                    <input type="text" name="ingredient" class="ingredient" id="ar-ingredient10"
+                        placeholder="ingrediens">
+                </div>
+            </div>
+
+            <div class="ar-step-container">
+                <h2 class="ar-add-step ar-text">Tilføj trin</h2>
+
+                <h3 class="ar-text step-text" id="step1">1</h3>
+                <textarea name="step" id="text-step1" class="step-area"></textarea>
+
+                <h3 class="ar-text step-text" id="step2">2</h3>
+                <textarea name="step" id="text-step2" class="step-area"></textarea>
+
+                <h3 class="ar-text step-text" id="step3">3</h3>
+                <textarea name="step" id="text-step3" class="step-area"></textarea>
+
+                <h3 class="ar-text step-text" id="step4">4</h3>
+                <textarea name="step" id="text-step4" class="step-area"></textarea>
+
+                <h3 class="ar-text step-text" id="step5">5</h3>
+                <textarea name="step" id="text-step5" class="step-area"></textarea>
+            </div>
+
+            <div class="ar-category ar-text">
+                <h2>Tilføj kategorier</h2>
+                <label class="category-container">Morgenmad
+                    <input type="checkbox" name="morgenmad" id="morgenmad">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="category-container">Frokost
+                    <input type="checkbox" name="frokost" id="frokost">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="category-container">Aftensmad  
+                    <input type="checkbox" name="aftensmad" id="aftensmad">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="category-container">Dessert
+                    <input type="checkbox" name="dessert" id="dessert">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="category-container">Snacks  
+                    <input type="checkbox" name="snacks" id="snacks">   
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="category-container">Glutenfri
+                    <input type="checkbox" name="glutenfri" id="glutenfri">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="category-container">Nøddefri
+                    <input type="checkbox" name="noddefri" id="noddefri">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="category-container">Sukkerfri
+                    <input type="checkbox" name="sukkerfri" id="sukkerfri">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="category-container">Sund
+                    <input type="checkbox" name="sund" id="sund">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="category-container">Hurtig
+                    <input type="checkbox" name="hurtig" id="hurtig">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <input type="submit" value="Gem opskrift" id="save-button">
+
+        </div>
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>

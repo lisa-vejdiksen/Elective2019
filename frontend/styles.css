@@ -119,3 +119,207 @@ p.velkomstTxt {
     margin-top: 1vw;
     margin-bottom: 4vw;
 }
+
+
+/* ADD RECIPE */
+.ar-head {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+}
+
+.minutes {
+    display: inline-block;
+    margin: 0;
+}
+
+.ar-text {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.ar-grid-container {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2vw;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-areas: 
+        'title prep cook image'
+        'ingredient-container ingredient-container step-container step-container'
+        'category category category category'
+        '. button button .';
+}
+
+.ar-add-title {
+    grid-area: title;
+}
+
+#ar-title, #ar-image {
+    width: 100%;
+}
+
+.ar-add-preptime {
+    grid-area: prep;
+    margin-left: 25%;
+}
+
+.ar-add-cooktime {
+    grid-area: cook;
+}
+
+#ar-preptime, #ar-cooktime {
+    width: 40%;
+}
+
+#ar-preptime::-webkit-inner-spin-button, #ar-preptime::-webkit-outer-spin-button, #ar-cooktime::-webkit-inner-spin-button, #ar-cooktime::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.ar-add-image {
+    grid-area: image;
+}
+
+.ar-ingredient-container {
+    grid-area: ingredient-container;
+    width: 90%;
+}
+
+.ar-ingredient-row {
+    margin-bottom: 15px;
+}
+
+.amount {
+    width: 10%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.amount::-webkit-inner-spin-button, .amount::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.measure {
+    padding: 1px 2px 2px;
+}
+
+.ingredient {
+    width: 65%;
+    padding-left: 5px;
+}
+
+.ar-step-container {
+    grid-area: step-container;
+    display: grid;
+    grid-template-columns: 1fr 14fr;
+    grid-template-areas: 
+        'add-step add-step'
+        's1 t1'
+        's2 t2'
+        's3 t3'
+        's4 t4'
+        's5 t5';
+}
+
+.ar-add-step {
+    grid-area: add-step;
+}
+
+#step1 {grid-area: s1;}
+#text-step1 {grid-area: t1;}
+#step2 {grid-area: s2;}
+#text-step2 {grid-area: t2;}
+#step3 {grid-area: s3;}
+#text-step3 {grid-area: t3;}
+#step4 {grid-area: s4;}
+#text-step4 {grid-area: t4;}
+#step5 {grid-area: s5;}
+#text-step5 {grid-area: t5;}
+
+.step-text {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+}
+
+.step-area {
+    margin-bottom: 15px;
+    resize: vertical;
+    height: 60px;
+}
+
+.ar-category {
+    grid-area: category;
+}
+
+.category-container {
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    margin-right: 1vw;
+    cursor: pointer;
+}
+
+.category-container input {
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.category-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.category-container input:checked ~ .checkmark {
+    background-color: green;
+  }
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.category-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.category-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
+#save-button {
+    grid-area: button;
+    width: 60%;
+    margin: 50px auto;
+    background-color: green;
+    border: none;
+    padding: 14px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    cursor: pointer;
+}
+
+#save-button:hover {
+    background-color: rgb(0, 99, 0);
+}
+
+
+
