@@ -1,0 +1,20 @@
+{
+  "name": "veganeruniverset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mssql": "^5.1.0",
+    "nodemon": "^1.19.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
