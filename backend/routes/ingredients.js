@@ -1,32 +1,41 @@
 const express = require('express');
 const router = express.Router();
-const Joi = require('@hapi/joi');
 const Ingredient = require('../models/ingredient');
 
-router.get('/', (req, res) => {
-    Ingredient.readAll()
-        .then((ingredients) => {
-            return res.json(ingredient);
-        })
-        .catch((error) => {
-            if (DEBUG) { console.log(`model/ingredients: routes.... GET: ${err}`) }
-            return res.status(error.code).json(error);
+router.get('/', async(req, res) => {
 
-        });
+    try {
+        const ingredients = await Ingredient.readAll();
+
+        return res.json(ingredients);
+    } catch (err) {
+        return res.status(err.code).json(err);
+    }
+
 });
 
-router.post('/', (req, res) => {
+router.get('/:id', async(req, res) => {
+
+    try {
+        const ingredient = await Ingredient.readById(req.params.id);
+
+        return res.json(ingredient);
+    } catch (err) {
+        return res.status(err.code).json(err);
+    }
+
+});
+
+
+router.post('/', async(req, res) => {
     const { error } = Ingredient.validate(req.body);
-    if (DEBUG) { console.log(`model/ingredients: Routes... Validate: ${err}`) }
-    if (error) return res.status(400).json(error)
-    else {
-        new Ingredient(req.body).create()
-            .then((ingredient) => {
-                return res.json(ingredient);
-            })
-            .catch((error) => {
-                return res.status(error.code).json(error);
-            });
+    if (error) return res.status(400).json({ code: 400, message: `Bad request. ${JSON.stringify(error.details)}` });
+
+    try {
+        const newIngredient = await new Ingredient(req.body).create();
+        return res.json(newIngredient);
+    } catch (err) {
+        return res.status(err.code).json(err);
     }
 });
 
