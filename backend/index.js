@@ -10,9 +10,9 @@ app.use(express.json());
 
 app.use('/api/users', users);
 app.use('/api/recipes', recipes);
-app.use('/api/categories', categories); 
+app.use('/api/categories', categories);
 app.use('/api/ingredients', ingredients);
-app.use('/api/measurements', measurements); 
+app.use('/api/measurements', measurements);
 
 
 const port = 8193;
