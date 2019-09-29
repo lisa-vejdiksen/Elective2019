@@ -125,6 +125,7 @@ GO
 INSERT INTO dbo.vuUSER -- Hashed passwords
     (userName, userPassword)
 VALUES
+<<<<<<< Updated upstream
     /*password: pw1234*/
     ('testuser', '$2a$10$AYgiDFE5nL.FexfrKGd5feN7/06YmO9PP0shUCCyWidCiVkvNWNrS'),
     /*password: lisa1234*/
@@ -133,6 +134,12 @@ VALUES
     ('Therese', '$2a$10$zgzLl7zROp60ziKydcdI1uW3oPH/48am9cFr9uylktZncnroC6KVK'),
     /*password: sofie1234*/
     ('Sofie', '$2a$10$byQ7Hq2vq3Dzv.Oql7Nr9u3vejTyY2jMuNi5pT/ERUOLi3SuwLA8O')
+=======
+    ('testuser', 'pw'),
+    ('Lisa', 'pw'),
+    ('Therese', 'pw'),
+    ('Sofie', 'pw')
+>>>>>>> Stashed changes
 GO
 
 INSERT INTO dbo.vuRECIPE

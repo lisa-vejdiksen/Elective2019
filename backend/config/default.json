@@ -1,9 +1,9 @@
 {
     "connectionString": {
-        "user": "wad0918_1074193",
-        "password": "bazoztqtm",
+        "user": "wad0918_1074197",
+        "password": "dzqtchqxh",
         "server": "des-sql.ucn.dk\\DESSTUD",
-        "database": "wad0918_1074193"
+        "database": "wad0918_1074197"
     },
     "DEBUG": true,
     "jwtPrivateKey": "key-for-vu"
