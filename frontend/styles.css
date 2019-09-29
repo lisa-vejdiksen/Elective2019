@@ -126,10 +126,16 @@ footer {
 .pFooter {
     float: left;
     margin-top: 2vw;
-    margin-left: 3vw;
+    margin-left: 4vw;
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
+.addrecipe {
+    margin-right: 4vw;
+    margin-top: 2vw;
+    float: right;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
 
 /*FORSIDE:*/
 
@@ -161,16 +167,16 @@ p.velkomstTxt {
     margin-bottom: 4vw;
 }
 
-#koldskålDiv {
-    background-image: url(https://miasommer.files.wordpress.com/2017/05/img_2768.jpg?w=768);
-    background-position: center;
-}
 
 #hummusDiv {
     background-image: url(https://miasommer.files.wordpress.com/2011/08/img_8857-crop.jpg?w=768);
     background-position: center;
 }
 
+#pestoDiv {
+    background-image: url('assets/pestosnurre.jpg');
+    background-position: center;
+}
 #kyllingDiv {
     background-image: url(https://miasommer.files.wordpress.com/2019/01/img_2075.jpg?w=768);
     background-position: top;
