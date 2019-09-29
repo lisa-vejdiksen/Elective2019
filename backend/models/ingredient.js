@@ -121,6 +121,57 @@ class Ingredient {
         });
     }
 
+    static readAllByRecipe(recipeID) {
+        return new Promise(async (resolve, reject) => {
+            if (DEBUG) { console.log('models/ingredient: readAllByRecipe .. started') }
+            try {
+                const pool = await sql.connect(con);
+                if (!pool) throw {"code": 500, "message": 'Failed to connect ingredient.readAllByRecipe'}
+                if (DEBUG) { console.log('models/ingredient: readAllByRecipe .. pool successful') }
+
+                const foundRecipeIngredients = await pool.request()
+                    .input('id', sql.Int, recipeID)
+                    .query('SELECT * FROM vuINGREDIENT JOIN vuRECIPEINGREDIENT ON vuRECIPEINGREDIENT.FK_ingredientID = vuINGREDIENT.ingredientID JOIN vuRECIPE ON vuRECIPE.recipeID = vuRECIPEINGREDIENT.FK_recipeID WHERE vuRECIPE.recipeID = @id');
+                if (DEBUG) { console.log('models/ingredient: readAllByRecipe .. query successful') }
+
+                let recipeIngredients = [];
+                for (let i = 0; i < foundRecipeIngredients.recordset.length; i++) {
+                    const recipeIngredient = {
+                        id: foundRecipeIngredients.recordset[i].ingredientID,
+                        name: foundRecipeIngredients.recordset[i].ingredientName
+                    }
+                    const { error } = Ingredient.validate(recipeIngredient);
+                    if (error) throw { code: 500, message: `Internal server error. Recipe ingredient ${recipeIngredient.id} does not validate from DB` }
+                    if (DEBUG) { console.log(`models/ingredient: readAllByRecipe .. Recipe ingredient ${recipeIngredient.id} OK`) }
+
+                    recipeIngredients.push(new Ingredient(recipeIngredient));
+                }
+
+                if (DEBUG) { console.log('models/ingredient: readAllByRecipe .. recipeIngredients OK') }
+                resolve(recipeIngredients);
+
+            } catch (err) {
+                if (DEBUG) { console.log(`models/ingredient: readAllByRecipe .. ERROR: ${err.code + ": " + err.message}`) }
+                const errSchema = Joi.object().keys({
+                    code: Joi.number().integer().min(400).max(600).required(),
+                    message: Joi.any()
+                });
+                let errorObj = {
+                    code: err.code,
+                    message: err.message
+                }
+                const { error } = errSchema.validate(err);
+                if (error) {
+                    errorObj.code = 500;
+                    errorObj.message = `Internal server error: ${err.message}`;
+                }
+
+                reject(errorObj);
+            }
+            sql.close();
+        });
+    }
+
     create() {
         const obj = this;
         return new Promise(async(resolve, reject) => {

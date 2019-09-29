@@ -45,7 +45,7 @@ GO
 
 -- CREATE TABLES
 
-CREATE TABLE dbo.vuUSER --HASHED PASSWORDS
+CREATE TABLE dbo.vuUSER 
 (
     userID INT NOT NULL IDENTITY PRIMARY KEY,
     userName NVARCHAR(255) NOT NULL,
@@ -122,13 +122,13 @@ GO
 
 -- INSERT
 
-INSERT INTO dbo.vuUSER -- Hashed passwords
+INSERT INTO dbo.vuUSER 
     (userName, userPassword)
 VALUES
-    ('testuser', 'pw'),
-    ('Lisa', 'pw'),
-    ('Therese', 'pw'),
-    ('Sofie', 'pw')
+    ('testuser', '$2a$10$AYgiDFE5nL.FexfrKGd5feN7/06YmO9PP0shUCCyWidCiVkvNWNrS'),
+    ('Lisa', '$2a$10$hPHtbZWJQTm4gV8mF43lduPeoertN7baMzlZqY6/0IFh0q2Vx1ZaW'),
+    ('Therese', '$2a$10$zgzLl7zROp60ziKydcdI1uW3oPH/48am9cFr9uylktZncnroC6KVK'),
+    ('Sofie', '$2a$10$byQ7Hq2vq3Dzv.Oql7Nr9u3vejTyY2jMuNi5pT/ERUOLi3SuwLA8O')
 GO
 
 INSERT INTO dbo.vuRECIPE

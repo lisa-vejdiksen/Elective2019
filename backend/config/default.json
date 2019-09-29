@@ -5,6 +5,8 @@
         "server": "des-sql.ucn.dk\\DESSTUD",
         "database": "wad0918_1074193"
     },
+    
+    "saltRounds": 10,
     "DEBUG": true,
-    "jwtPrivateKey": "key-for-vu"
+    "jwtPrivatKey": "key-for-vu"
 }
