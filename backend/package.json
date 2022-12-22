@@ -8,7 +8,7 @@
     "bcryptjs": "^2.4.3",
     "config": "^3.2.2",
     "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mssql": "^5.1.0",
     "nodemon": "^1.19.2"
   },
